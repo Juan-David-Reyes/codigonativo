@@ -1,4 +1,5 @@
 html {
   --bgcolor:#f2f2f2;
   --main-color:#fafafa;
+  background-color: var(--bgcolor);
 }/*# sourceMappingURL=style.css.map */
