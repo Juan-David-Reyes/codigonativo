@@ -1,8 +1,8 @@
 html {
   /* Colores de fondo */
   --color-bg-primary: #fafafa;
-  --color-bg-secondary: #f2f2f2;
-  --color-bg-accent: #0078d4;
+  --color-bg-secondary: #1d2027;
+  --color-bg-accent: #1AFD71;
   /* Colores de texto */
   --color-text-accent: #1AFD71;
   --color-text-secondary: #666666;
@@ -14,19 +14,39 @@ html {
   /* Fuentes */
   --font-title: "Poppins", sans-serif;
   --font-body: "Inter", sans-serif;
+  --font-awesome:"Font Awesome 6 Free";
   background-color: var(--color-bg-primary);
-  font-family: var(--body-font);
+  box-sizing: border-box;
+  font-family: var(--font-body);
 }
 html h1, html h2, html h3, html h4, html h5, html h6 {
   font-family: var(--title-font);
 }
 
+.main-nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background-color: rgba(29, 32, 39, 0.9294117647);
-  height: 90px;
+  background-color: rgba(29, 32, 39, 0.9411764706);
+  height: 64px;
+  position: fixed;
+  width: calc(100% - 32px);
+  max-width: 900px;
+  left: 0;
+  right: 0;
+  top: 16px;
+  margin: 0 auto;
+  border-radius: 16px;
+  padding: 0px 16px 0 24px;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
 }
 .navbar h1 {
   margin: 0;
@@ -67,8 +87,46 @@ html h1, html h2, html h3, html h4, html h5, html h6 {
 .navbar li a:hover {
   color: var(--color-text-accent);
 }
+.navbar .mobile-menu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+li .cta, .cta {
+  background-color: var(--color-bg-accent);
+  border-radius: 8px;
+  padding: 0 16px;
+  color: var(--color-text-dark) !important;
+  font-weight: 500 !important;
+  border: 1px solid var(--color-bg-accent);
+  transition: 300ms ease;
+}
+li .cta:hover, .cta:hover {
+  background-color: transparent;
+  color: var(--color-text-accent) !important;
+}
 
 .container {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .main-nav {
+    flex-direction: row-reverse;
+  }
+  .main-nav .mobile-menu {
+    display: flex;
+  }
+  .main-nav .mobile-menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  }
+  .navbar .link-menu {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
