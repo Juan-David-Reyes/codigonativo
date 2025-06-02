@@ -92,6 +92,9 @@ html h1, html h2, html h3, html h4, html h5, html h6 {
   justify-content: center;
   align-items: center;
 }
+.navbar .mobile-menu i {
+  font-size: 22px;
+}
 
 li .cta, .cta {
   background-color: var(--color-bg-accent);
