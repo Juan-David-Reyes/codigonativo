@@ -1,0 +1,21 @@
+{
+  "name": "Código Nativo",
+  "short_name": "Código",
+  "description": "Agencia de diseño web profesional para mejorar tu negocio.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0078d4",
+  "icons": [
+    {
+      "src":"/images/favicon/android-chrome-192x192.png",
+      "type":"image/png",
+      "sizes":"192x192"
+    },
+    {
+      "src":"/images/favicon/android-chrome-512x512.png",
+      "type":"image/png",
+      "sizes":"512x512"
+    }
+  ]
+}
