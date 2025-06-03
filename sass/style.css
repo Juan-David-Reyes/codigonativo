@@ -91,9 +91,11 @@ html h1, html h2, html h3, html h4, html h5, html h6 {
   display: none;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .navbar .mobile-menu i {
   font-size: 22px;
+  color: var(--color-text-light);
 }
 
 li .cta, .cta {

@@ -93,8 +93,10 @@ html{
         display: none;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         i{
             font-size: 22px;
+            color: var(--color-text-light);
         }
 }
 }
