@@ -302,6 +302,7 @@ li .cta:hover, .cta:hover {
   }
   .navbar .submenu.active {
     max-height: 100vh;
+    overflow-y: scroll;
   }
   .navbar .menu {
     padding: 8px 16px 8px 16px;
