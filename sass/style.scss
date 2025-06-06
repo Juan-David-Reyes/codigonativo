@@ -296,6 +296,8 @@ li .cta, .cta{
 @media screen and (max-width:480px) {
     
     .navbar{
+        top: 8px;
+        width: calc(100% - 16px);
         li{
             a.cta{
                 font-size: 12px;
@@ -310,14 +312,14 @@ li .cta, .cta{
                 padding: 16px 0;
             }
             &.active{
-                max-height: 710px;
+                max-height: 100vh;
             }
         }
         .menu{
             padding: 8px 16px 8px 16px;
             
             a img{
-                width: 80px;
+                width: 100px;
             }
         }
         

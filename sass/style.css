@@ -285,6 +285,10 @@ li .cta:hover, .cta:hover {
   }
 }
 @media screen and (max-width: 480px) {
+  .navbar {
+    top: 8px;
+    width: calc(100% - 16px);
+  }
   .navbar li a.cta {
     font-size: 12px;
     font-weight: 600 !important;
@@ -297,13 +301,13 @@ li .cta:hover, .cta:hover {
     padding: 16px 0;
   }
   .navbar .submenu.active {
-    max-height: 710px;
+    max-height: 100vh;
   }
   .navbar .menu {
     padding: 8px 16px 8px 16px;
   }
   .navbar .menu a img {
-    width: 80px;
+    width: 100px;
   }
   .linkAllServices {
     grid-column: 1/span 1;
