@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Charset y Viewport: Deben ir primero para evitar problemas de renderizado -->
+    <!-- Charset y Viewport -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     
-    <!-- Título de la página -->
+    <!-- Título y Descripción -->
     <title>Codigo Nativo</title>
     <meta name="description" content="Codigo Nativo - Agencia de diseño web profesional para optimizar tu negocio online. Diseño, desarrollo y mantenimiento web.">
     <meta name="keywords" content="diseño web, desarrollo web, mantenimiento web, SEO, Codigo Nativo">
 
-    <!-- Manifest y Theme Color para PWA -->
-    <link rel="manifest" href="/manifest.json">
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Codigo Nativo">
+    <meta property="og:description" content="Codigo Nativo - Agencia de diseño web profesional para optimizar tu negocio online.">
+    <meta property="og:image" content="images/og-image.png">
+    <meta property="og:url" content="https://www.codigonativo.com">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Manifest y Theme Color -->
+    <link rel="manifest" href="/diseno-ux-ui/manifest.json">
     <meta name="theme-color" content="#0078d4">
 
-     <!-- Favicons -->
+    <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </noscript>
 
     <!-- Scripts -->
-     <script src="js/main.js" defer></script>
-
-    
+    <script src="js/main.js" defer></script>
 </head>
+
 <body>
     <header>
         <nav class="navbar">
             <div class="menu">
                 <picture>
                     <a href="https://codigonativo.com/">
-                        <img src="images/dark_logo.svg" width="120" height="38" alt="Código Nativo | Agencia de marketing digital">
+                        <img loading="lazy" src="images/dark_logo.svg" width="120" height="38" alt="Código Nativo | Agencia de marketing digital">
                     </a>
                 </picture>
                 <div class="main-nav">
@@ -50,27 +60,90 @@
                             <i class="fa-solid fa-bars"></i>
                         </li>
                     </ul>
-                    <ul class="link-menu">
-                        <li><a href="https://codigonativo.com/">Inicio</a></li>
-                        <li><a href="https://codigonativo.com/nosotros/">Nosotros</a></li>
-                        <li><a id="servicios">Servicios</a></li>
-                        <li><a href="https://codigonativo.com/blog/">Blog</a></li>
-                        <li><a href="https://codigonativo.com/contacto/">Contacto</a></li>
+                    <ul class="link-menu" role="menu">
+                        <li role="menuitem"><a href="https://codigonativo.com/">Inicio</a></li>
+                        <li role="menuitem"><a href="https://codigonativo.com/nosotros/">Nosotros</a></li>
+                        <li><a href="#servicios" id="servicios">Servicios<i class="arrowService fas fa-chevron-down"></i></a></li>
+                        <li role="menuitem"><a href="https://codigonativo.com/blog/">Blog</a></li>
+                        <li role="menuitem"><a href="https://codigonativo.com/contacto/">Contacto</a></li>
                     </ul>
                     <ul class="cta-menu">
                         <li>
-                            <a href="" class="cta">Consultoría gratis</a>
+                            <a href="#" class="cta">Consultoría gratis</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <ul class="submenu">
-                <li><a href="">Ver todos los servicios</a></li>
-                <li><a href="">Diseño Web</a></li>
-                <li><a href="">Diseño Web</a></li>
-                <li><a href="">Diseño Web</a></li>
-                <li><a href="">Diseño Web</a></li>
-                <li><a href="">Diseño Web</a></li>
+                
+                <li role="menuitem">
+                    <a href="#">
+                        <picture>
+                            <img width="40" height="40" src="images/servicios1.png" alt="">
+                        </picture>
+                        <div class="serv">
+                            <h2>Diseño web <span class="badge destacado">DESTACADO</span></h2>
+                            <p>Características avanzadas para Webs superiores.</p>
+                        </div>
+                    </a>
+                </li>
+                <li role="menuitem">
+                    <a href="#">
+                        <picture>
+                            <img width="40" height="40" src="images/servicios1.png" alt="">
+                        </picture>
+                        <div class="serv">
+                            <h2>Re-diseño web</h2>
+                            <p>Características avanzadas para Webs superiores.</p>
+                        </div>
+                    </a>
+                </li>
+                <li role="menuitem">
+                    <a href="#">
+                        <picture>
+                            <img width="40" height="40" src="images/servicios1.png" alt="">
+                        </picture>
+                        <div class="serv">
+                            <h2>Mantenimiento</h2>
+                            <p>Características avanzadas para Webs superiores.</p>
+                        </div>
+                    </a>
+                </li>
+                <li role="menuitem">
+                    <a href="#">
+                        <picture>
+                            <img width="40" height="40" src="images/servicios1.png" alt="">
+                        </picture>
+                        <div class="serv">
+                            <h2>Optimización web</h2>
+                            <p>Características avanzadas para Webs superiores.</p>
+                        </div>
+                    </a>
+                </li>
+                <li role="menuitem">
+                    <a href="#">
+                        <picture>
+                            <img width="40" height="40" src="images/servicios1.png" alt="">
+                        </picture>
+                        <div class="serv">
+                            <h2>Auditorías</h2>
+                            <p>Características avanzadas para Webs superiores.</p>
+                        </div>
+                    </a>
+                </li>
+                <li role="menuitem">
+                    <a href="#">
+                        <picture>
+                            <img width="40" height="40" src="images/servicios1.png" alt="">
+                        </picture>
+                        <div class="serv">
+                            <h2>Diseño UX/UI <span class="badge nuevo">NUEVO</span></h2>
+                            <p>Productos y servicios intuitivos y funcionales</p>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="linkAllServices" role="menuitem"><a href="">Ver todos los servicios</a></li>
             </ul>
         </nav>
     </header>
@@ -103,5 +176,8 @@
         
 
     </footer>
+
+    <script src="https://unpkg.com/web-vitals@5.0.2/dist/web-vitals.iife.js" defer></script>
+
 </body>
 </html>
