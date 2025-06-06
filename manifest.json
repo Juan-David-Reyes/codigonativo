@@ -8,12 +8,12 @@
   "theme_color": "#0078d4",
   "icons": [
     {
-      "src":"/images/favicon/android-chrome-192x192.png",
+      "src":"/diseno-ux-ui/images/favicon/android-chrome-192x192.png",
       "type":"image/png",
       "sizes":"192x192"
     },
     {
-      "src":"/images/favicon/android-chrome-512x512.png",
+      "src":"/diseno-ux-ui/images/favicon/android-chrome-512x512.png",
       "type":"image/png",
       "sizes":"512x512"
     }
