@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const serviciosBtn = document.getElementById("servicios");
     const mobileMenuBtn = document.querySelector(".mobile-menu");
@@ -57,4 +59,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         lastScrollY = currentScrollY;
     });
+
+    // Funcion para llamar el año actual
+
+    function updateCurrentYear() {
+        var currentYear = new Date().getFullYear();
+        document.getElementById('currentYear').innerText = currentYear;
+    }
+    // Llamar a la función para inicializar el año actual
+    updateCurrentYear();
 });
+
+
