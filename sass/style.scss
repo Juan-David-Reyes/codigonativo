@@ -6,6 +6,7 @@ html{
     --color-bg-white: #ffffff;
     --color-bg-secondary: #1d2027;
     --color-bg-dark-hover: #16191e;
+    --color-bg-ligh-gray: #CECECE;
     --color-bg-accent: #1AFD71;
 
     /* Colores Badges */
@@ -40,8 +41,33 @@ html{
     }
     p, span{
         font-family: var(--font-body);
-
+        margin: 0;
     }
+}
+h1{
+    font-size: 56px;
+    line-height: 100%;
+    font-weight:800;
+}
+h2{
+    font-size: 40px;
+    line-height: 120%;
+    font-weight:800;
+}
+h3{
+    font-size: 32px;
+    line-height: 100%;
+    font-weight:800;
+}
+h4{
+    font-size: 24px;
+    line-height: 100%;
+    font-weight: 600;
+}
+p{
+    font-size: 18px;
+    line-height: 140%;
+    margin: 0;
 }
 .main-nav{
     display: flex;
@@ -73,12 +99,44 @@ li .cta, .cta{
         background-color: var(--color-badge-nuevo);
     }
 }
-
-.section{
-    max-width: 1440px;
-    margin: 0 auto;
+.cta-green{
+    text-decoration: none;
+    background-color: var(--color-bg-accent);
+    color: var(--color-text-dark);
+    border-radius: 100px;
+    padding: 6px 8px 6px 16px;
+    font-weight: 600;
+    font-size: 15px;
+    max-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    box-sizing: border-box;
+    transition: 300ms ease-out;
+    &:hover{
+      box-shadow: 3px 3px 0 var(--color-bg-dark-hover);  
+    }
+    i{
+        background-color: var(--color-bg-secondary);
+        color: var(--color-text-light);
+        margin-left: 8px;
+        padding: 4px;
+        width: 12px;
+        height: 12px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+    }
+}
+section.section{
     padding: 0 16px;
     min-height: 400px;
+    .container{
+        margin: 0 auto;
+        max-width: 1440px;
+    }
 }
 #servicios{
     cursor: pointer;
@@ -265,6 +323,72 @@ li .cta, .cta{
     }
 }
 
+// Hero Section
+
+.header{
+    background: url(/images/bg-pattern.png)no-repeat center bottom;
+    background-size: cover;
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 100px 0px 16px;
+        box-sizing: border-box;
+        min-height: 640px;
+        gap: 32px;
+    }
+    h1, p{
+        max-width: 780px;
+        margin: 0 auto;
+    }
+    
+}
+
+.beneficios .container{
+    background-color: var(--color-bg-white);
+    padding: 64px;
+    box-sizing: border-box;
+    border-radius: 32px;
+    border: 1px solid var(--color-bg-ligh-gray);
+    box-shadow: 8px 8px 0 var(--color-bg-ligh-gray);
+    h2{
+        text-align: center;
+        max-width: 528px;
+        margin: 0 auto 64px;
+    }
+}
+.cont-beneficios{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    img{
+        object-fit: contain;
+        max-width: 66px;
+    }
+    h3{
+        font-size: 18px;
+        line-height: 130%;
+        margin: 16px 0 0px;
+    }
+}
+
+// Section Metodologia
+
+.metodologia .container{
+    padding: 180px 0;
+    h2, p{
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    h2{
+        margin: 0 auto 24px;
+    }
+}
+
+
 /* Footer */
 
 footer{
@@ -300,6 +424,7 @@ footer{
     }
     h4{
         margin: 0 0 16px;
+        font-size: 16px;
     }
     nav{
         display: grid;
@@ -379,6 +504,9 @@ footer{
         max-height: 540px;
     }
 
+    .cont-beneficios{
+        grid-template-columns: 1fr 1fr;
+    }
 
 
     footer{
@@ -393,6 +521,22 @@ footer{
     }
 }
 @media screen and (max-width:480px) {
+
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h3{
+        font-size: 22px;
+    }
+    h4{
+        font-size: 18px;
+    }
+    p{
+        font-size: 16px;
+    }
     
     .navbar{
         top: 8px;
@@ -428,6 +572,19 @@ footer{
         grid-column: 1 / span 1;
     }
 
+    .header .container {
+        min-height: 480px;
+    }
+
+    .cont-beneficios{
+        grid-template-columns: 1fr;
+        h3{
+            font-size: 16px;
+        }
+    }
+    .beneficios .container{
+        padding: 24px;
+    }
 
     footer{
         a{
