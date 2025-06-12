@@ -90,6 +90,17 @@ li .cta:hover, .cta:hover {
   color: var(--color-text-accent) !important;
 }
 
+button {
+  content: "";
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  color: var(--color-text-light);
+}
+
 .badge {
   font-size: 10px;
   padding: 2px 8px;
@@ -274,10 +285,6 @@ section.section .container {
   color: var(--color-text-light);
 }
 
-.linkAllServices {
-  grid-column: 1/span 3;
-}
-
 .navbar .submenu {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -295,6 +302,13 @@ section.section .container {
 .navbar .submenu a:hover {
   background-color: var(--color-bg-dark-hover);
   color: var(--color-text-light);
+}
+.navbar .submenu .linkAllServices {
+  grid-column: 1/span 3;
+}
+.navbar .submenu .linkAllServices a {
+  border-radius: 8px;
+  text-decoration: underline;
 }
 .navbar .submenu picture {
   display: flex;
@@ -334,7 +348,7 @@ section.section .container {
 }
 
 .header {
-  background: url(/images/bg-pattern.png) no-repeat center bottom;
+  background: url(../images/bg-pattern.webp) no-repeat center bottom;
   background-size: cover;
 }
 .header .container {
@@ -488,7 +502,7 @@ footer a:hover {
     width: 40px;
     height: 40px;
   }
-  .linkAllServices {
+  .navbar .submenu .linkAllServices {
     grid-column: 1/span 2;
   }
   .navbar .link-menu {
@@ -552,7 +566,7 @@ footer a:hover {
   .navbar .menu a img {
     width: 100px;
   }
-  .linkAllServices {
+  .navbar .submenu .linkAllServices {
     grid-column: 1/span 1;
   }
   .header .container {
@@ -560,12 +574,18 @@ footer a:hover {
   }
   .cont-beneficios {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
   .cont-beneficios h3 {
     font-size: 16px;
+    margin-top: 8px;
   }
   .beneficios .container {
     padding: 24px;
+  }
+  .beneficios .container h2 {
+    text-align: left;
+    margin-bottom: 32px;
   }
   footer a {
     width: 100%;

@@ -87,6 +87,14 @@ li .cta, .cta{
         color: var(--color-text-accent)!important;
     }
 }
+button{
+    content: '';
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: var(--color-text-light);
+}
 .badge{
     font-size: 10px;
     padding: 2px 8px;
@@ -265,13 +273,11 @@ section.section{
         }
     }
 }
-.linkAllServices{
-    grid-column: 1 / span 3;
-}
 .navbar .submenu{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
+    
     a{
         height: auto;
         padding: 16px;
@@ -285,6 +291,13 @@ section.section{
             color: var(--color-text-light);
         }
 
+    }
+    .linkAllServices{
+    grid-column: 1 / span 3;
+        a{
+            border-radius: 8px;
+            text-decoration: underline;
+        }
     }
     picture{
         display: flex;
@@ -323,10 +336,11 @@ section.section{
     }
 }
 
+
 // Hero Section
 
 .header{
-    background: url(/images/bg-pattern.png)no-repeat center bottom;
+    background: url(../images/bg-pattern.webp)no-repeat center bottom;
     background-size: cover;
     .container{
         display: flex;
@@ -491,7 +505,7 @@ footer{
             }
         }
     }
-    .linkAllServices{
+    .navbar .submenu .linkAllServices{
         grid-column: 1 / span 2;
     }
     .navbar .link-menu{
@@ -568,7 +582,7 @@ footer{
         }
         
     }
-    .linkAllServices{
+    .navbar .submenu .linkAllServices{
         grid-column: 1 / span 1;
     }
 
@@ -578,12 +592,18 @@ footer{
 
     .cont-beneficios{
         grid-template-columns: 1fr;
+        gap: 40px;
         h3{
             font-size: 16px;
+            margin-top: 8px;
         }
     }
     .beneficios .container{
         padding: 24px;
+        h2{
+            text-align: left;
+            margin-bottom: 32px;
+        }
     }
 
     footer{
