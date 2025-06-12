@@ -87,6 +87,10 @@ li .cta, .cta{
         color: var(--color-text-accent)!important;
     }
 }
+header{
+    z-index: 50;
+    position: relative;
+}
 button{
     content: '';
     appearance: none;
@@ -94,6 +98,11 @@ button{
     border: 0;
     outline: 0;
     color: var(--color-text-light);
+    font-size: 14px;
+    font-family: var(--font-title);
+    &:hover{
+        color: var(--color-text-accent)!important;
+    }
 }
 .badge{
     font-size: 10px;
@@ -112,7 +121,7 @@ button{
     background-color: var(--color-bg-accent);
     color: var(--color-text-dark);
     border-radius: 100px;
-    padding: 6px 8px 6px 16px;
+    padding: 6px 16px 6px 16px;
     font-weight: 600;
     font-size: 15px;
     max-height: 40px;
@@ -122,25 +131,36 @@ button{
     width: max-content;
     box-sizing: border-box;
     transition: 300ms ease-out;
-    &:hover{
-      box-shadow: 3px 3px 0 var(--color-bg-dark-hover);  
-    }
+    position: relative;
+    border: 1px solid var(--color-bg-dark-hover);
     i{
-        background-color: var(--color-bg-secondary);
-        color: var(--color-text-light);
+        opacity: 0;
         margin-left: 8px;
         padding: 4px;
         width: 12px;
         height: 12px;
-        display: inline-flex;
         justify-content: center;
         align-items: center;
         border-radius: 100px;
+        transition: 300ms ease-out;
+        display: inline-flex;
+        background-color: var(--color-bg-secondary);
+        color: var(--color-text-light);
+        position: absolute;
+        right: 8px;
+    }
+    &:hover{
+      box-shadow: 3px 3px 0 var(--color-bg-dark-hover);
+      padding-right: 38px;
+      i{
+        opacity: 1;
+      }
     }
 }
 section.section{
     padding: 0 16px;
     min-height: 400px;
+    position: relative;
     .container{
         margin: 0 auto;
         max-width: 1440px;
@@ -342,6 +362,16 @@ section.section{
 .header{
     background: url(../images/bg-pattern.webp)no-repeat center bottom;
     background-size: cover;
+    &::before{
+        content: '';
+        background: linear-gradient(to bottom, transparent, var(--color-bg-light-blue) );
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        margin: auto;
+        inset: 0;
+        z-index: 1;
+    }
     .container{
         display: flex;
         flex-direction: column;
@@ -352,6 +382,8 @@ section.section{
         box-sizing: border-box;
         min-height: 640px;
         gap: 32px;
+        z-index: 2;
+        position: relative;
     }
     h1, p{
         max-width: 780px;
