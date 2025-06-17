@@ -469,10 +469,12 @@ section.faqs .container {
   font-size: 18px;
   font-weight: 500;
   display: flex;
+  gap: 8px;
   justify-content: space-between;
   align-items: center;
   font-family: var(--font-title);
   color: var(--color-text-secondary-hover);
+  line-height: 150%;
   cursor: pointer;
 }
 .faq .question span {

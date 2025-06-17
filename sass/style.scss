@@ -461,10 +461,12 @@ section.faqs{
         font-size: 18px;
         font-weight: 500;
         display: flex;
+        gap: 8px;
         justify-content: space-between;
         align-items: center;
         font-family: var(--font-title);
         color: var(--color-text-secondary-hover);
+        line-height: 150%;
         cursor: pointer;
         span{
             transition: transform 0.3s ease-out, background-color 300ms ease-out;
