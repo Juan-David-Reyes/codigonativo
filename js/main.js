@@ -68,6 +68,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     // Llamar a la función para inicializar el año actual
     updateCurrentYear();
-});
+ 
+    
+    // Función FAQS
+    const faqs = document.querySelectorAll(".faq");
 
+    faqs.forEach((faq) => {
+        const question = faq.querySelector(".question");
+        const answer = faq.querySelector(".answer");
+
+        question.addEventListener("click", () => {
+            const isActive = question.classList.contains("active");
+
+            // Cerrar todos los contenedores
+            faqs.forEach((item) => {
+                const itemAnswer = item.querySelector(".answer");
+                const itemQuestion = item.querySelector(".question");
+
+                itemAnswer.style.maxHeight = null; // Cierra
+                itemAnswer.style.padding = "0"; // Quitar padding dinámico
+                itemQuestion.classList.remove("active");
+            });
+
+            // Si no estaba activo, activarlo
+            if (!isActive) {
+                question.classList.add("active");
+                answer.style.maxHeight = answer.scrollHeight + "px"; // Ajusta la altura dinámica
+                answer.style.paddingBottom = "24px"; // Ajusta la altura dinámica
+            }
+        });
+    });
+
+  
+});
 

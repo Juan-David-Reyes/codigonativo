@@ -20,6 +20,9 @@ html{
     --color-text-light-hover: #cbcbcb;
     --color-text-light: #ffffff;
     --color-text-dark: #282828;
+    --color-text-linkblue: #3053E2;
+    --color-text-linkblue-hover: #4A6BF3;
+    --color-text-linkblue-active: #1F3CB0;
 
     /* Otros colores */
     --color-border: #dddddd;
@@ -81,10 +84,12 @@ li .cta, .cta{
     color: var(--color-text-dark)!important;
     font-weight: 500!important;
     border: 1px solid var(--color-bg-accent);
-    transition: 300ms ease;
+    transition: 300ms ease-out;
+    box-shadow: 0px 0px 0 var(--color-bg-accent);
     &:hover{
         background-color: transparent;
         color: var(--color-text-accent)!important;
+        box-shadow: 3px 3px 0 var(--color-bg-accent);
     }
 }
 header{
@@ -133,6 +138,7 @@ button{
     transition: 300ms ease-out;
     position: relative;
     border: 1px solid var(--color-bg-dark-hover);
+    box-shadow: 0px 0px 0 var(--color-bg-dark-hover);
     i{
         opacity: 0;
         margin-left: 8px;
@@ -434,6 +440,58 @@ section.section{
     }
 }
 
+// Section FAQS
+
+section.faqs{
+    padding-bottom: 160px;
+    box-sizing: border-box;
+    .container{
+        max-width: 860px;
+    }
+}
+.faq{
+    border-bottom: 1px solid var(--color-bg-ligh-gray);
+    &:last-child{
+        border-bottom: 0px;
+    }
+    .question{
+        margin: 0;
+        padding: 24px 0;
+        box-sizing: border-box;
+        font-size: 18px;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: var(--font-title);
+        color: var(--color-text-secondary-hover);
+        cursor: pointer;
+        span{
+            transition: transform 0.3s ease-out, background-color 300ms ease-out;
+            padding: 4px;
+            box-sizing: border-box;
+            background-color: transparent;
+            border-radius: 100px;
+        }
+        &:hover{
+            color: var(--color-text-secondary);
+        }
+        &.active{
+            color: var(--color-text-linkblue-active);
+            span{
+                transform: rotate(180deg);
+            }
+            
+        }
+    }
+    .answer{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        padding: 0;
+     
+    }
+}
 
 /* Footer */
 
