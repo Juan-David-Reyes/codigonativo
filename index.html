@@ -43,9 +43,33 @@
 
     <!-- Scripts -->
     <script src="js/main.js" defer></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8DDYN9VZKZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-8DDYN9VZKZ');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W6R7NGFS');</script>
+    <!-- End Google Tag Manager -->
+    
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6R7NGFS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <header>
         <nav class="navbar">
             <div class="menu">
@@ -69,7 +93,7 @@
                     </ul>
                     <ul class="cta-menu">
                         <li>
-                            <a href="https://wa.me/573245659117?text=Hola%2C+estoy+interesado+en+agendar+una+consultor%C3%ADa+gratis+sobre+dise%C3%B1o+UX%2FUI." target="_blank" rel="noopener noreferrer" class="cta">Consultoría gratis</a>
+                            <a id="cta-free-consultation" href="https://wa.me/573245659117?text=Hola%2C+estoy+interesado+en+agendar+una+consultor%C3%ADa+gratis+sobre+dise%C3%B1o+UX%2FUI." target="_blank" rel="noopener noreferrer" class="cta">Consultoría gratis</a>
                         </li>
                     </ul>
                 </div>
@@ -153,7 +177,7 @@
             <div class="container">
                 <h1>Diseño UX/UI para potenciar tu negocio</h1>
                 <p>Diseñamos productos digitales personalizados basados en las necesidades de tus usuarios. Creamos experiencias intuitivas, funcionales y memorables que impulsan el éxito de tu negocio.</p>
-                <a href="https://wa.me/573001234567?text=Hola%2C+estoy+interesado+en+sus+servicios+de+dise%C3%B1o+UX%2FUI." target="_blank" rel="noopener noreferrer" class="cta-green">Enviar mensaje <i class="fas fa-chevron-right"></i></a>
+                <a id="cta-whatsapp-diseno-ux" href="https://wa.me/573126357309?text=Hola%2C+estoy+interesado+en+sus+servicios+de+dise%C3%B1o+UX%2FUI." target="_blank" rel="noopener noreferrer" class="cta-green" class="cta">Enviar mensaje <i class="fas fa-chevron-right"></i></a>
             </div>
         </section>
 
@@ -200,26 +224,29 @@
                 <div class="paso-a-paso">
                     <ol>
                         <li>
-                            <h3>Investigación</h3>
+                            <h3><span>01</span>Investigación</h3>
                             <p>Entendemos a tus usuarios y tus objetivos mediante herramientas como entrevistas, mapas de empatía y análisis del mercado.</p>
                         </li>
                         <li>
-                            <h3>Ideación</h3>
+                            <h3><span>02</span>Ideación</h3>
                             <p>Generamos soluciones creativas y centradas en el usuario, ya sea en procesos iterativos o en un sprint intensivo de 5 días.</p>
                         </li>
                         <li>
-                            <h3>Prototipado</h3>
+                            <h3><span>03</span>Prototipado</h3>
                             <p>Creamos prototipos funcionales para validar ideas, con foco en reducir riesgos y optimizar el desarrollo.</p>
                         </li>
                         <li>
-                            <h3>Pruebas de usabilidad</h3>
+                            <h3><span>04</span>Pruebas de usabilidad</h3>
                             <p>Probamos y mejoramos el diseño basado en datos reales y retroalimentación directa.</p>
                         </li>
                         <li>
-                            <h3>Iteración</h3>
+                            <h3><span>05</span>Iteración</h3>
                             <p>Aplicamos las mejores prácticas para que cada solución sea funcional, intuitiva y memorable.</p>
                         </li>
                     </ol>
+                    <picture>
+                        <img width="600" height="600" src="images/metodologia.webp#F2F0E9" alt="">
+                    </picture>
                 </div>
             </div>
         </section>
@@ -239,32 +266,48 @@
         <section class="section entregables">
             <div class="container">
                 <h2> Entregables UX que Impulsan Resultados</h2>
-                <div class="e-items">
-                    <div class="e-item">
+                <ul class="e-items">
+                    <li class="e-item">
+                        <img width="60" height="60" src="" alt="">
                         <h3>Wireframes</h3>
-                    </div>
-                    <div class="e-item">
+                        <p>Bocetos básicos que muestran cómo se organizará la información en una página o app, sin detalles visuales.</p>
+                    </li>
+                    <li class="e-item">
+                        <img width="60" height="60" src="" alt="">
                         <h3>Prototipos interactivos</h3>
-                    </div>
-                    <div class="e-item">
+                        <p>Versiones preliminares del diseño que permiten simular cómo funcionará un sitio web o aplicación antes de construirlo.</p>
+                    </li>
+                    <li class="e-item">
+                        <img width="60" height="60" src="" alt="">
                         <h3>Diseño visual final</h3>
-                    </div>
-                    <div class="e-item">
+                        <p>El resultado completo y detallado del diseño con colores, imágenes, y elementos listos para ser implementados.</p>
+                    </li>
+                    <li class="e-item">
+                        <img width="60" height="60" src="" alt="">
                         <h3>Guía de estilo</h3>
-                    </div>
-                    <div class="e-item">
+                        <p>Un manual que define colores, fuentes y elementos visuales para asegurar que todo se vea coherente en el proyecto.</p>
+                    </li>
+                    <li class="e-item">
+                        <img width="60" height="60" src="" alt="">
                         <h3>Pruebas de usabilidad</h3>
-                    </div>
-                    <div class="e-item">
+                        <p>Evaluaciones donde usuarios reales prueban el diseño para asegurarse de que sea fácil y claro de usar.</p>
+                    </li>
+                    <li class="e-item">
+                        <img width="60" height="60" src="" alt="">
                         <h3>Documentación estratégica</h3>
-                    </div>
-                    <div class="e-item">
+                        <p>Información que explica los objetivos y enfoques del diseño, para que todos los involucrados sigan el mismo plan.</p>
+                    </li>
+                    <li class="e-item">
+                        <img width="60" height="60" src="" alt="">
                         <h3>Guías de investigación</h3>
-                    </div>
-                    <div class="e-item">
+                        <p>Indicaciones y resultados sobre las necesidades de los usuarios, basadas en estudios y entrevistas.</p>
+                    </li>
+                    <li class="e-item">
+                        <img width="60" height="60" src="" alt="">
                         <h3>Benchmarks</h3>
-                    </div>
-                </div>
+                        <p>Un análisis comparativo para evaluar cómo está tu diseño frente a la competencia o estándares del mercado.</p>
+                    </li>
+                </ul>
             </div>
         </section>
 
