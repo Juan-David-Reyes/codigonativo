@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const itemQuestion = item.querySelector(".question");
 
                 itemAnswer.style.maxHeight = null; // Cierra
-                itemAnswer.style.padding = "0"; // Quitar padding dinámico
+                itemAnswer.style.paddingBottom = "0"; // Quitar padding dinámico
                 itemQuestion.classList.remove("active");
             });
 
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!isActive) {
                 question.classList.add("active");
                 answer.style.maxHeight = answer.scrollHeight + "px"; // Ajusta la altura dinámica
-                answer.style.paddingBottom = "24px"; // Ajusta la altura dinámica
+                answer.style.paddingBottom = "24px"; // Ajusta la padding a 24px Bottom
             }
         });
     });

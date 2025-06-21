@@ -54,14 +54,14 @@ h1{
     font-weight:800;
 }
 h2{
-    font-size: 40px;
+    font-size: 48px;
     line-height: 120%;
-    font-weight:800;
+    font-weight:700;
 }
 h3{
     font-size: 32px;
     line-height: 100%;
-    font-weight:800;
+    font-weight:600;
 }
 h4{
     font-size: 24px;
@@ -408,7 +408,7 @@ section.section{
     box-shadow: 8px 8px 0 var(--color-bg-ligh-gray);
     h2{
         text-align: center;
-        max-width: 528px;
+        max-width: 720px;
         margin: 0 auto 64px;
     }
 }
@@ -447,6 +447,7 @@ section.section{
         margin-top: 80px;
         gap: 40px;
         ol{
+            list-style: none;
             display: flex;
             flex-direction: column;
             gap: 24px;
@@ -457,11 +458,7 @@ section.section{
             position: relative;
             padding: 0;
             text-decoration: none;
-            &::marker{
-                content: '';
-                display: none;
-                appearance: none;
-            }
+            list-style: none;
             p{
                 text-align: left;
                 margin: 0;
@@ -496,6 +493,17 @@ section.section{
         width: 100%;
         height: 100%;
     }
+}
+
+// Entregables UX
+
+.e-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 32px;
+    list-style: none;
+    margin-top: 60px;
+    padding: 0;
 }
 
 // Section FAQS
@@ -547,9 +555,7 @@ section.faqs{
     .answer{
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease-out;
-        padding: 0;
-     
+        transition: max-height 300ms ease-out, padding-bottom 300ms ease-out;
     }
 }
 
